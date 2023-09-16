@@ -301,16 +301,9 @@ private:
 			}
 		} else if (input == 113) { // q
 			this->running = false;
-			for (int row = 0; row < 4; row++) {
-				for (int col = 0; col < 4; col ++) {
-					std::cout << this->oldMap[row][col];
-				}
-				std::cout << std::endl;
-			}
 		}
 		this->prevInput = input;
 	}
-
 };
 
 #pragma clang diagnostic push
