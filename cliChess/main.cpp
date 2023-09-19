@@ -5,13 +5,6 @@ enum COLOR {
 	WHITE, BLACK
 };
 
-enum DIRECTION {
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT
-};
-
 enum PIECE {
 	PAWN = 'P',
 	KNIGHT = 'N',
@@ -292,13 +285,13 @@ private:
 			for (int col = 0; col < 8; col++) {
 				if ((row % 2 != 0 && col % 2 != 0) ||
 				    (row % 2 == 0 && col % 2 == 0)) {
-					std::cout << black << whiteText;
+					std::cout << black << whiteText << bold;
 				} else if ((row % 2 == 0 && col % 2 != 0) ||
 				           (row % 2 != 0 && col % 2 == 0)) {
-					std::cout << white << blackText;
+					std::cout << white << blackText << bold;
 				}
 				if (board[row][col] != nullptr) {
-					if (board[row][col]->getColor() == BLACK) std::cout << redText;
+					if (board[row][col]->getColor() == BLACK) std::cout << redText << bold;
 					if (cursor[1] == row && cursor[0] == col)
 						std::cout << "[" << (char) board[row][col]->getPiece() << "]";
 					else std::cout << " " << (char) board[row][col]->getPiece() << " ";
@@ -313,7 +306,8 @@ private:
 		std::cout << "   A  B  C  D  E  F  G  H" << std::endl;
 		if (turn == WHITE) std::cout << "It is whites turn" << std::endl;
 		if (turn == BLACK) std::cout << "It is blacks turn" << std::endl;
-		std::cout << "Keybinds: q=quit, c=clear selected piece, enter=select space, arrow keys=move cursor" << std::endl;
+		std::cout << "Keybinds: q=quit, c=clear selected piece, enter=select space, arrow keys=move cursor"
+		          << std::endl;
 	}
 
 	bool isInCheck(COLOR pieceColor) {
