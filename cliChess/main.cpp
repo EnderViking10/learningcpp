@@ -313,7 +313,7 @@ private:
 		std::cout << "   A  B  C  D  E  F  G  H" << std::endl;
 		if (turn == WHITE) std::cout << "It is whites turn" << std::endl;
 		if (turn == BLACK) std::cout << "It is blacks turn" << std::endl;
-		std::cout << "Keybinds: q=quit, c=clear selected piece"
+		std::cout << "Keybinds: q=quit, c=clear selected piece, enter=select space, arrow keys=move cursor" << std::endl;
 	}
 
 	bool isInCheck(COLOR pieceColor) {
