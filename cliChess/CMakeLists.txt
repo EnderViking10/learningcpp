@@ -3,4 +3,7 @@ project(cliChess)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(cliChess main.cpp)
+add_executable(
+        cliChess main.cpp
+        icon.o
+)
