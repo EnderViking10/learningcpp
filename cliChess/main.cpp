@@ -313,6 +313,7 @@ private:
 		std::cout << "   A  B  C  D  E  F  G  H" << std::endl;
 		if (turn == WHITE) std::cout << "It is whites turn" << std::endl;
 		if (turn == BLACK) std::cout << "It is blacks turn" << std::endl;
+		std::cout << "Keybinds: q=quit, c=clear selected piece"
 	}
 
 	bool isInCheck(COLOR pieceColor) {
@@ -419,10 +420,7 @@ private:
 		}
 		if (input == 113) running = false; // q
 		if (input == 13) move(); // Enter
-		if (input == 99) { // c
-			if (turn == WHITE) startRow = 20;
-			else turn = WHITE;
-		}
+		if (input == 99) startRow = 20;
 		if (input == 3) exit(0); // ctrl-c
 
 		prevInput = input;
